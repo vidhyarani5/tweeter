@@ -1,0 +1,33 @@
+.counter {
+  margin-top: 10px;
+  float:right;
+}
+textarea {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+}
+.new-tweet {
+  border: none;
+  flex-flow: row wrap;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #0068ec;
+  color: aliceblue;
+  margin-top: 10px;
+}
+.new-tweet {
+  border: none;
+  width: 100%;
+  margin-top: 50px;
+}
+.tweetText {
+  margin-left: 2px;
+  margin-right: 2px;
+  border-bottom: 4px solid black;
+}

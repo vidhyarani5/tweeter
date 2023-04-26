@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  font-size: 70px;
+  width: auto;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: Arial;
+}
