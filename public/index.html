@@ -38,6 +38,7 @@
 
     <!-- Counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
   </head>
 
   <body class="body">
@@ -65,7 +66,7 @@
     <main class="container" Content-type:application/x-www-form-urlencoded>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
+        <form class = "tweetsubmit" action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
