@@ -1,0 +1,15 @@
+header{
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  justify-content: center;
+  background-color: #b35fa6;
+}
+
+h2{
+  margin: 0;
+  color: black;
+}

@@ -9,7 +9,7 @@ textarea {
   border-top: none;
   border-left: none;
   border-right: none;
-  background-color: transparent;
+  background-color: #f4f1ec;
 }
 .new-tweet {
   border: none;
@@ -30,4 +30,73 @@ textarea {
   margin-left: 2px;
   margin-right: 2px;
   border-bottom: 4px solid black;
+}
+
+#containertweet {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 1000px;
+  padding-bottom: 10px
+}
+
+.bordertweet {
+  border: solid;
+}
+
+.headertweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+  height: 80px;
+  background-color:  #f4f1ec;
+  margin-top: 5px;
+}
+
+.headeruserphoto {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.headername{
+  font-family: 'Source Sans Pro';
+}
+
+.headerusername{
+  width: 100%;
+  margin: 20px; 
+  margin-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+  color: #A9A9A9; 
+  font-family: 'Source Sans Pro';
+}
+
+.tweetsentence {
+  border-bottom: solid;
+  padding-bottom: 30px;
+  margin: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footertweet {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: 20px;
+  margin-top: 0px;
+}
+
+.btn:hover {
+  color: orange;
+}
+
+.bordertweet:hover {
+  box-shadow: 5px 10px grey;
+}
+
+.tweetbutton{
+  font-family: "Bungee", sans-serif;
+  color: white;
+  background-color: #4056A1;
 }
