@@ -13,13 +13,19 @@ html {
 /*
  * Global layout stuff
  */
- @media only screen and (min-width: 1024px) {
   body {
-    display: flex;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: 'Source Sans Pro';
   }
 
   main {
-    width: 50%;
-    margin-top: 160px;
+    /*width: 50%;
+    margin-top: 160px;*/
+    width: 90%;
+    margin: auto;
+    vertical-align: middle;
+    background-color: #f4f1ec;
+    padding-top: 20px;
   }
- }
