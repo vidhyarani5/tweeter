@@ -44,9 +44,9 @@ $(document).ready(function() {
     $(".tweet-submit").submit(function(event) {
       event.preventDefault();
       if ($("#tweet-text").val().length > 140) {
-        alert('Tweets must be less than 140 characters');
+        $(".errormessage").html(`Error: Tweet must be less than 140 characters!`).slideDown().slideUp(3000);
       } else if ($("#tweet-text").val().length === 0) {
-        alert('Text feild cannot be empty');
+        $(".errormessage").html(`Error: Your Tweet cannot be Empty!!!`).slideDown().slideUp(3000);
       } else {
           $.post('/tweets', $(this).serialize()).then(function() {
               $.ajax('/tweets', {method: 'GET'}).then(function(data) {
@@ -65,7 +65,5 @@ function loadTweets() {
     renderTweets(data);
   });
 }
-
-
 
 loadTweets();
