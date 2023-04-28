@@ -4,7 +4,7 @@ nav {
   background-color: orange;
   color: #FFFFFF;
   top: 0; 
-  position: fixed; 
+  /*position: fixed; */
   font-family: 'Bungee', 'sans-serif';
   padding: 1.5em;
   display: flex;
@@ -25,8 +25,15 @@ span {
 
 .content-right {
   font-family: 'Source Sans Pro';
-  display:flex;
+  display: flex;
   align-items: center; 
   flex-direction: column;
+}
+
+.arrowbutton{
+  color: red;
+  padding: 0;
+  border: none;
+  background: none;
 }
   

@@ -13,32 +13,13 @@ html {
 /*
  * Global layout stuff
  */
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
 
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: sans-serif;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
- /*main {
-  width: 90%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: #f4f1ec;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0px 50px 50px 50px;
-}*/
-main {
-  width: 90%;
-  margin: auto;
-  vertical-align: middle;
-  background-color: #f4f1ec;
-  padding-top: 20px;
+  main {
+    width: 50%;
+    margin-top: 160px;
+  }
  }

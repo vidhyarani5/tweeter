@@ -81,6 +81,7 @@ textarea {
   margin: 20px;
   font-size: 18px;
   font-weight: bold;
+  word-wrap: break-word;
 }
 
 .footer-tweet {
