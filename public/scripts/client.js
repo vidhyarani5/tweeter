@@ -7,23 +7,29 @@
 const renderTweets = function(tweets) {
   for (const tweet in tweets) {
     const tweetdata = createTweetElement(tweets[tweet]);
-    $('#containertweet').prepend(tweetdata);
+    $('#container-tweet').prepend(tweetdata);
   }
 }
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
   let $tweet =
-  `<article class = "bordertweet">
-    <header class = "headertweet">
-      <img class = "headeruserphoto" src= "${tweet.user.avatars}"></img>
-      <span class="headername">${tweet.user.name}</span>
-      <span class="headerusername">${tweet.user.handle}</span>
+  `<article class = "border-tweet">
+    <header class = "header-tweet">
+      <img class = "header-userphoto" src= "${tweet.user.avatars}"></img>
+      <span class="header-name">${tweet.user.name}</span>
+      <span class="header-username">${tweet.user.handle}</span>
     </header>
-    <p class="tweetsentence">${tweet.content.text}</p>
-    <span class = "tweetline"></span>
-    <footer class = "footertweet">
+    <p class="tweet-sentence">${escape(tweet.content.text)}</p>
+    <span class = "tweet-line"></span>
+    <footer class = "footer-tweet">
       <a> ${timeago.format(tweet.created_at)} </a>
-      <div class = "tweetbuttons">
+      <div class = "tweet-button">
         <button class = "btn"><i class="fa-solid fa-flag"></i></button>
         <button class = "btn"><i class="fa-solid fa-retweet"></i></button>
         <button class = "btn"><i class="fa-solid fa-heart"></i></button>
@@ -35,7 +41,7 @@ const createTweetElement = function(tweet) {
 }
 
 $(document).ready(function() {
-    $(".tweetsubmit").submit(function(event) {
+    $(".tweet-submit").submit(function(event) {
       event.preventDefault();
       if ($("#tweet-text").val().length > 140) {
         alert('Tweets must be less than 140 characters');
@@ -45,7 +51,8 @@ $(document).ready(function() {
           $.post('/tweets', $(this).serialize()).then(function() {
               $.ajax('/tweets', {method: 'GET'}).then(function(data) {
                   const tweetdata = createTweetElement(data[data.length-1]);
-                  $('#containertweet').prepend(tweetdata);
+                  $('#container-tweet').prepend(tweetdata);
+                  document.getElementById("tweet-text").value = '';
             });
           });
       }
@@ -58,4 +65,7 @@ function loadTweets() {
     renderTweets(data);
   });
 }
+
+
+
 loadTweets();

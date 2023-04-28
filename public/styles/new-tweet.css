@@ -11,10 +11,7 @@ textarea {
   border-right: none;
   background-color: #f4f1ec;
 }
-.new-tweet {
-  border: none;
-  flex-flow: row wrap;
-}
+
 .btn-primary {
   color: #fff;
   background-color: #0068ec;
@@ -25,26 +22,32 @@ textarea {
   border: none;
   width: 100%;
   margin-top: 50px;
-}
-.tweetText {
-  margin-left: 2px;
-  margin-right: 2px;
-  border-bottom: 4px solid black;
-  margin-bottom: 10px;
+  border: none;
+  flex-flow: row wrap;
 }
 
-#containertweet {
+.tweet-Text {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  overflow-wrap: break-word;
+  background-color: transparent;
+}
+
+#container-tweet {
   margin: auto;
   margin-top: 50px;
   max-width: 1000px;
   padding-bottom: 10px
 }
 
-.bordertweet {
+.border-tweet {
   border: solid;
 }
 
-.headertweet {
+.header-tweet {
   display: flex;
   flex-direction: row;
   justify-content: flex-start; 
@@ -53,16 +56,16 @@ textarea {
   margin-top: 5px;
 }
 
-.headeruserphoto {
+.header-userphoto {
   width: 50px;
   margin-left: 20px;
 }
 
-.headername{
+.header-name{
   font-family: 'Source Sans Pro';
 }
 
-.headerusername{
+.header-username{
   width: 100%;
   margin: 20px; 
   margin-left: 20px;
@@ -72,7 +75,7 @@ textarea {
   font-family: 'Source Sans Pro';
 }
 
-.tweetsentence {
+.tweet-sentence {
   border-bottom: solid;
   padding-bottom: 30px;
   margin: 20px;
@@ -80,7 +83,7 @@ textarea {
   font-weight: bold;
 }
 
-.footertweet {
+.footer-tweet {
   display: flex;
   justify-content: space-between;
   font-size: 15px;
@@ -92,11 +95,11 @@ textarea {
   color: orange;
 }
 
-.bordertweet:hover {
+.border-tweet:hover {
   box-shadow: 5px 10px grey;
 }
 
-.tweetbutton{
+.tweet-button {
   font-family: "Bungee", sans-serif;
   color: white;
   background-color: #4056A1;
