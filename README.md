@@ -10,15 +10,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Screenshot main page in desktop size"](https://github.com/vidhyarani5/tweeter/blob/master/public/images/desktopScreen.png?raw=true)
 
-*Main page, sized for tablet*
+*Main page, sized for Mobile*
 
 !["Screenshot of main page in tablet size"](https://github.com/vidhyarani5/tweeter/blob/master/public/images/MobileScreen.png?raw=true)
 
-*Main page, sized for Mobile, with the new tweet form visible*
+*Main page, sized for desktop and with an error message present*
 
 !["Screenshot of main page with toggled new tweet form"](https://github.com/vidhyarani5/tweeter/blob/master/public/images/ErrorMessage.png?raw=true)
 
-*Main page, sized for desktop, with the new tweet form visible, and with an error message present*
 
 ## Getting Started
 
