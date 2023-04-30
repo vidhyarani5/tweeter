@@ -1,16 +1,22 @@
+/*Creating CSS properties for the nav bar at the top of the page */
 nav {
   height: 120px;
-  width: 100%;
-  background-color: orange;
+  background-color: #4056A1;
   color: #FFFFFF;
-  top: 0; 
+  position: fixed;
   font-family: 'Bungee', 'sans-serif';
   padding: 1.5em;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  }
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+}
 
+/*Class for the navigation text */
 span {
   font-family: "Bungee", sans-serif;
   display: flex;
@@ -18,21 +24,31 @@ span {
   align-items: center;
 }
 
-.bold{
-  font-weight: bold;
-}
-
 .content-right {
   font-family: 'Source Sans Pro';
-  display: flex;
+  display:flex;
   align-items: center; 
   flex-direction: column;
 }
 
+/*Class for the arrow button */
 .arrowbutton{
-  color: red;
-  padding: 0;
-  border: none;
-  background: none;
+  background-color: transparent;
+  color: #db0909e8;
+  border-style: none;
+  cursor: pointer;
+  outline: none;
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
+
+/* For Responsive Design*/
+@media (max-width: 1024px) {
+  nav {
+    background-color: #ffa500;;
+  }
+}
+
+
   

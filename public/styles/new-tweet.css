@@ -1,7 +1,10 @@
+/*CSS for the counter in textarea*/
 .counter {
   margin-top: 10px;
   float:right;
 }
+
+/*CSS for textarea*/
 textarea {
   display: block;
   width: 100%;
@@ -12,12 +15,15 @@ textarea {
   background-color: #f4f1ec;
 }
 
+/*CSS for the Tweet Button*/
 .btn-primary {
   color: #fff;
   background-color: #0068ec;
   color: aliceblue;
   margin-top: 10px;
 }
+
+/*CSS for the Tweet*/
 .new-tweet {
   border: none;
   width: 100%;
@@ -26,7 +32,8 @@ textarea {
   flex-flow: row wrap;
 }
 
-.tweet-Text {
+/*CSS for the Tweet Text*/
+#tweet-Text {
   width: 100%;
   height: 50px;
   border: none;
@@ -36,6 +43,7 @@ textarea {
   background-color: transparent;
 }
 
+/*CSS for the Tweet Container*/
 #container-tweet {
   margin: auto;
   margin-top: 50px;
@@ -43,10 +51,13 @@ textarea {
   padding-bottom: 10px
 }
 
+/*CSS for the Tweet Border*/
 .border-tweet {
   border: solid;
+  width: 100%;
 }
 
+/*CSS for the Tweet Header*/
 .header-tweet {
   display: flex;
   flex-direction: row;
@@ -56,16 +67,19 @@ textarea {
   margin-top: 5px;
 }
 
+/*CSS for the Tweet Image*/
 .header-userphoto {
-  width: 50px;
   margin-left: 20px;
 }
 
-.header-name{
+/*CSS for the Tweet Header Name*/
+.header-name {
+  margin-left: 10px;
   font-family: 'Source Sans Pro';
 }
 
-.header-username{
+/*CSS for the Tweet User Name*/
+.header-username {
   width: 100%;
   margin: 20px; 
   margin-left: 20px;
@@ -75,15 +89,17 @@ textarea {
   font-family: 'Source Sans Pro';
 }
 
+/*CSS for the Tweet sentence/text*/
 .tweet-sentence {
   border-bottom: solid;
   padding-bottom: 30px;
-  margin: 20px;
+  /*margin: 20px;*/
   font-size: 18px;
   font-weight: bold;
   word-wrap: break-word;
 }
 
+/*CSS for the Tweet Footer*/
 .footer-tweet {
   display: flex;
   justify-content: space-between;
@@ -92,21 +108,37 @@ textarea {
   margin-top: 0px;
 }
 
+/*CSS for the Tweet Button*/
 .btn:hover {
   color: orange;
 }
 
+/*CSS for the Tweet Border*/
 .border-tweet:hover {
   box-shadow: 5px 10px grey;
 }
 
+/*CSS for the Tweet Button*/
 .tweet-button {
   font-family: "Bungee", sans-serif;
   color: white;
   background-color: #4056A1;
 }
 
+/*CSS for the Tweet Alignment*/
+.tweetalign{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*CSS for the Tweet Label*/
+label{
+  font-weight: bold;
+}
+
+/*CSS for the Tweet Error Message*/
 .errormessage{
   color: red;
   align-items: center; 
 }
+

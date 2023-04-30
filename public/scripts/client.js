@@ -11,12 +11,14 @@ const renderTweets = function(tweets) {
   }
 }
 
+// encoding text so that unsafe characters are converted into a safe "encoded" representation.
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+//Creating the tweets
 const createTweetElement = function(tweet) {
   let $tweet =
   `<article class = "border-tweet">
@@ -40,15 +42,19 @@ const createTweetElement = function(tweet) {
 
 }
 
+//It will clear the textarea after submitting the tweet and dispaly the error messages
 $(document).ready(function() {
     $(".tweet-submit").submit(function(event) {
       event.preventDefault();
       if ($("#tweet-text").val().length > 140) {
-        $(".errormessage").html(`Error: Tweet must be less than 140 characters!`).slideDown().slideUp(3000);
+        $(".errormessage").html(`Error: Tweet must be less than 140 characters!`).slideDown().slideUp(10000);
       } else if ($("#tweet-text").val().length === 0) {
-        $(".errormessage").html(`Error: Your Tweet cannot be Empty!!!`).slideDown().slideUp(3000);
+        $(".errormessage").html(`Error: Your Tweet cannot be Empty!!!`).slideDown().slideUp(10000);
       } else {
+          $(".errormessage").html(``);
+          //Serialize the form data and send it to the server as a query string.
           $.post('/tweets', $(this).serialize()).then(function() {
+              //calling ajax to get the last submission
               $.ajax('/tweets', {method: 'GET'}).then(function(data) {
                   const tweetdata = createTweetElement(data[data.length-1]);
                   $('#container-tweet').prepend(tweetdata);
@@ -59,6 +65,7 @@ $(document).ready(function() {
     }); 
   }); 
 
+// fetching tweets from the /tweets route, using Ajax
 function loadTweets() {
   $.ajax('/tweets', {method: 'GET'})
   .then(function(data) {
@@ -66,4 +73,5 @@ function loadTweets() {
   });
 }
 
+//Fetching all the tweets at Page load
 loadTweets();
